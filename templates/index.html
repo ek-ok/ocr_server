@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="cover-heading">OCR Text Extraction</h1>
+<br><br>
+
+<form role="form" method="POST" id="post-form" onsubmit="return false">
+    <div class="form-group">
+        <input type="text" class="form-control input-lg" id="image_url" placeholder="Enter an image url..." required>
+    </div>
+    <button type="submit" class="btn btn-lg btn-block btn-success boom" id="search">Extract Text!</button>
+</form>
+
+<div id="results">
+    <h3>Image</h3>
+    <img src="" id="results_image" class="img-custom">
+    <br>
+    <h3>Extracted Text</h3>
+    <div id="results_text" class="well div-custom"></div>
+    <br><br>
+    <div id="retry"><a href="">Try Another Image</a></div>
+    <br><br>
+</div>
+
+<!-- custom-->
+<script type="text/javascript" src="{{ url_for('static', filename='custom/js/script.js') }}"></script>
+
+{% endblock %}

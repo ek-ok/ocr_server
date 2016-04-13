@@ -1,0 +1,12 @@
+.container {
+    max-width: 500px;
+    text-align: center;
+}
+
+.img-custom {
+    max-width: 500px;
+}
+
+.div-custom {
+    white-space: pre;
+}
