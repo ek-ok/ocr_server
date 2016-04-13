@@ -14,6 +14,8 @@ from StringIO import StringIO
 def extract_text(url, sharpen=False):
     image_file = StringIO(requests.get(url).content)
     image = Image.open(image_file)
+    image.load()
+    image.split()
 
     if sharpen:
         image = image.filter(ImageFilter.SHARPEN)
